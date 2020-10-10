@@ -1,3 +1,8 @@
+body {
+  background-color: #AD69DF;
+  overflow-y: hidden;
+}
+
 .App {
   text-align: center;
 }
@@ -28,11 +33,33 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.RightFalse {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  background-color: white;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
 }
+
+.div1 { grid-area: 1 / 2 / 2 / 3; font-weight: bold;}
+.div2 { grid-area: 2 / 2 / 3 / 3; }
+.div3,  [id="4"], [id="7"] { grid-area: 3 / 1 / 4 / 2; border-radius: 10px; background-color: #AD69DF;padding: 10px; cursor: pointer;}
+.div4,  [id="5"], [id="8"] { grid-area: 3 / 3 / 4 / 4; border-radius: 10px; background-color: #AD69DF;padding: 10px; cursor: pointer;}
+.div3:active , [id="4"]:active, [id="7"]:active { opacity: 0.5;}
+.div4:active , [id="5"]:active, [id="8"]:active { opacity: 0.5;}
+
+
+.nextBtn {
+  margin-top:10px !important; border-radius: 10px; background-color: white;padding: 10px; cursor: pointer ; width: fit-content; margin:auto;
+}
+.nextBtn:active {
+ background-color: grey;
+}
+
